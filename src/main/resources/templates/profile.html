@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type">
+    <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/community.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+<div th:insert="navigation::nav"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12">
+            <h2><span aria-hidden="true" class="glyphicon glyphicon-plus"></span>发起</h2>
+            <hr>
+
+            <form action="" method="post">
+                <div class="form-group">
+                    <div><label for="title">问题标题</label>
+                        <input class="form-control" id="title" name="title" placeholder="标题" th:value="${tittle}"
+                               type="text">
+                    </div>
+                    <div>
+                        <label for="description">问题补充</label>
+                        <textarea class="form-control" cols="30" id="description"
+                                  name="description" rows="10" th:value="${description}"></textarea>
+                    </div>
+                    <div>
+                        <label for="tags">问题标签</label>
+                        <input class="form-control" id="tags" name="tags" placeholder="标签" th:value="${tags}"
+                               type="text">
+                    </div>
+                    <br>
+                    <span class="alter alert-danger" th:text="${error}"></span>
+                    <button class="btn btn-success btn-publish" type="submit">提交</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <h3>帮助</h3>
+            *
+            *
+            *
+            *
+            *
+            *
+            *
+            *
+
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
